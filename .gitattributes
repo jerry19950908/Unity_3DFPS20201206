@@ -1,2 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+Ch35_nonPBR.fbx filter=lfs diff=lfs merge=lfs -text
+Ch35_nonPBR@Idle.fbx filter=lfs diff=lfs merge=lfs -text
