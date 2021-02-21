@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33000013731957406}
   - component: {fileID: 23000013943122684}
   - component: {fileID: 64000010251917238}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Oil_tank_v2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
