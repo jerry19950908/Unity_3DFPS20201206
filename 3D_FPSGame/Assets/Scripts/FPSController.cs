@@ -109,7 +109,7 @@ public class FPSController : MonoBehaviour
     /// </summary>
     private void Addbullet()
     {
-        aud.PlayOneShot(soundAddbullet, Random.Range(0.8f, 1.2f));
+  
         //符合條件邏輯 才能補充子彈
         //1. 按下R
         //2. 不是在補充子彈
@@ -117,6 +117,7 @@ public class FPSController : MonoBehaviour
         //4. 目前子彈數量 小於 彈夾數量
         if (Input.GetKeyDown(KeyCode.R) && !isAddbullet && bulletTotal > 0 &&  bulletcurrent < bulletclip) // GetKey等於一直按住也有效
         {
+       
             //啟動協成(補充子彈協程方法);
             StartCoroutine(Delayaddbullet());
         }
@@ -128,6 +129,7 @@ public class FPSController : MonoBehaviour
     /// <returns></returns>
     private IEnumerator Delayaddbullet()
     {
+        aud.PlayOneShot(soundAddbullet, Random.Range(0.8f, 1.2f));
         isAddbullet = true;
         yield return new WaitForSeconds(addbulletTime);
         isAddbullet = false;
