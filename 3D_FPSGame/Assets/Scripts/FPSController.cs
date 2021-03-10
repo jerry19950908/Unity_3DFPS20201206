@@ -45,6 +45,11 @@ public class FPSController : MonoBehaviour
     public AudioClip soundAddbullet;
     [Header("開槍間隔時間"), Range(0f, 1f)]
     public float fireInterval = 0.1f;
+    [Header("攻擊力"), Range(0f, 100f)]
+    public float attack = 10f;
+
+
+
 
     private AudioSource aud;
     private float timer; //計時器
@@ -98,6 +103,8 @@ public class FPSController : MonoBehaviour
                 GameObject temp = Instantiate(bullet, pointFire.position, pointFire.rotation);
                 //暫存子彈.取得剛體元件.添加推力(生成點前方 * 速度)
                 temp.GetComponent<Rigidbody>().AddForce(transform.forward * speed);
+                //取得子彈腳本的傷害值 = 玩家腳本的傷害值 
+                temp.GetComponent<Bullet>().attack = attack;
             }
             else timer += Time.deltaTime;
      

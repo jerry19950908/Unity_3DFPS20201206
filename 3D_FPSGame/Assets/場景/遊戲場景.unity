@@ -4510,6 +4510,9 @@ MonoBehaviour:
   bullet: {fileID: 5081572257984222542, guid: bcfd9aa533d045046947dc7e2d2491d2, type: 3}
   bulletspeed: 500
   interval: 0.5
+  speedface: 9.5
+  bulletcount: 30
+  bulletclip: 30
 --- !u!1 &2145779227
 GameObject:
   m_ObjectHideFlags: 0
